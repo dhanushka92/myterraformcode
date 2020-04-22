@@ -1,22 +1,23 @@
 pipeline {
 
   agent any
-
-  environment {
-    access key= "AKIAI2CH655DYDV4VZVQ"
-    secret_key = "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"
-  }
-
-  stages {
+stages {
 
     stage('Checkout') {
       steps {
         checkout scm
         
-        /*sh 'mkdir -p creds' 
-        sh 'echo $SVC_ACCOUNT_KEY | base64 -d > ./creds/serviceaccount.json'*/
+        git branch:'master',url: 'https://github.com/dhanushka92/myterrapipeline.git'
       }
     }
+  stage('set terraform path'){
+    steps{
+      script{
+        def tfHome= tool name:'Terraform' env.PATH="${tfHome}:${env.Path}"
+      }
+      sh 'terraform -version'
+    }
+  }
 
     stage('TF Plan') {
       steps {
