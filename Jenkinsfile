@@ -8,6 +8,7 @@ stages {
         checkout scm
         
         git branch:'master',url: 'https://github.com/dhanushka92/myterrapipeline.git'
+        echo 'stage1'
       }
     }
 }
