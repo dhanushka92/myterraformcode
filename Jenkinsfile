@@ -10,7 +10,8 @@ stages {
         git branch:'master',url: 'https://github.com/dhanushka92/myterrapipeline.git'
       }
     }
-  stage('set terraform path'){
+}
+ /* stage('set terraform path'){
     steps{
       script{
         def tfHome= tool name:'Terraform' env.PATH="${tfHome}:${env.Path}"
@@ -44,6 +45,6 @@ stages {
       }
     }
 
-  } 
+  } */
 
 }
