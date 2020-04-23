@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
 
   agent any
 stages {
@@ -12,7 +12,7 @@ stages {
       }
     }
 }
- /* stage('set terraform path'){
+  stage('set terraform path'){
     steps{
       script{
         def tfHome= tool name:'Terraform' env.PATH="${tfHome}:${env.Path}"
@@ -48,4 +48,4 @@ stages {
 
   } */
 
-}
+
