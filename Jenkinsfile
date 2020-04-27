@@ -14,7 +14,7 @@ stage('Set Terraform path') {
  def tfHome = tool name:'Terraform'
  echo 'def'
  env.PATH = "${tfHome}:${env.PATH}"
-   echo 'path'
+   echo  env.PATH
  //wrap([$class: 'AnsiColorBuildWrapper', colorMapName: 'xterm'])
  }
 bat label: '', script: 'terraform -version'
