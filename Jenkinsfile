@@ -2,12 +2,12 @@ pipeline {
 agent any
 stages {
 
-    stage('Checkout') {
+   /* stage('Checkout') {
       steps {
         git credentialsId: '9282ea37-8649-44cb-98d6-bd6ed031e82f', url: 'https://github.com/dhanushka92/myterrapipeline.git'
         echo 'stage1'
       }
-    }
+    }*/
 stage('Set Terraform path') {
  steps {
  script{
