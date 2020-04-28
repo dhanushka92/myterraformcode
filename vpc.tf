@@ -3,6 +3,5 @@ resource "aws_vpc" "myvpc" {
 }
 resource "aws_instance" "server1"{
 ami="ami-08bf5f54919fada4a"
-vpc_id="${aws_vpc.myvpc.id}"
 instance_type="t2.micro"
 }
