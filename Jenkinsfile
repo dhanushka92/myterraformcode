@@ -2,25 +2,6 @@ pipeline {
 agent any
 stages {
 
-   /* stage('Checkout') {
-      steps {
-        git credentialsId: '9282ea37-8649-44cb-98d6-bd6ed031e82f', url: 'https://github.com/dhanushka92/myterrapipeline.git'
-        echo 'stage1'
-      }
-    }
-stage('Set Terraform path') {
- steps {
- script{
- def tfHome = tool name:'Terraform'
- echo 'def'
- env.PATH = "${tfHome}:${env.PATH}"
-   echo  env.PATH
- //wrap([$class: 'AnsiColorBuildWrapper', colorMapName: 'xterm'])
- }
-bat label: '', script: 'terraform -version'
- //sh label: '', script: 'terraform -version'
- }
-}*/
 stage('Provision infrastructure') {
  steps {
    bat label: '', script: 'terraform init'
