@@ -1,7 +1,7 @@
 clear
  
 # URL Parameter
-$WebURL = "https://s3-url//ChromeSetup.exe"
+$WebURL = "https://resourcepkgs.s3.amazonaws.com/ChromeSetup.exe"
   
 # Directory Parameter
 $FileDirectory = "$($env:USERPROFILE)$("\downloads\")"
