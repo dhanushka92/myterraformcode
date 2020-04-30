@@ -49,10 +49,10 @@ resource "aws_security_group" "sgrp1"{
 name="sgrp1"
 vpc_id="${aws_vpc.sample_vpc.id}"
  ingress{
- from_port=22
- to_port=22
+ from_port=3389
+ to_port=3389
  protocol="tcp"
- cidr_blocks=["10.0.0.0/27"]
+ cidr_blocks=["0.0.0.0/0"]
 }
 tags = {
     name = "SECURITYGRP1"
