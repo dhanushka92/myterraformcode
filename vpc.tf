@@ -9,7 +9,7 @@ tags = {
   }
 }
 resource "aws_subnet" "public-sub"{
-cidr_block="10.224.0.0/11"
+cidr_block="10.0.0.192/26"
 vpc_id="${aws_vpc.sample_vpc.id}"
 availability_zone="us-east-1a"
 }
@@ -57,14 +57,14 @@ tags = {
   }
 }
 
-resource "aws_subnet" "subnet4"{
+/*resource "aws_subnet" "subnet4"{
 vpc_id="${aws_vpc.sample_vpc.id}"
 cidr_block="${var.prvt_subnet4_cidr}"
 availability_zone="${data.aws_availability_zones.available.names[1]}"
 tags = {
     name = "SUBNET4"
   }
-}
+}*/
 
 resource "aws_security_group" "sgrp1"{
 name="sgrp1"
