@@ -9,7 +9,7 @@ tags = {
   }
 }
 resource "aws_subnet" "public-sub"{
-cidr_block="10.0.5.0/24"
+cidr_block="10.224.0.0/11"
 vpc_id="${aws_vpc.sample_vpc.id}"
 availability_zone="us-east-1a"
 }
