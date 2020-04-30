@@ -1,3 +1,13 @@
+
+resource "aws_instance" "appserver1"{
+ami="${var.ami}"
+instance_type="${var.inst_type}"
+subnet_id="${aws_subnet.public-sub.id}"
+key_name="dhanu1"
+associate_public_ip_address = "true"
+    }
+
+
 resource "aws_instance" "appserver1"{
 ami="${var.ami}"
 instance_type="${var.inst_type}"
