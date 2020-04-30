@@ -5,11 +5,8 @@ stages {
 stage('Provision infrastructure') {
  steps {
    bat label: '', script: 'terraform init'
- //bat label: '', script: 'terraform plan'
- bat label: '', script: 'terraform plan -out=plan'
-// bat label: '', script: 'terraform plan -out myplan'
-// bat label: '', script: 'terraform apply -auto-approve'
-// bat label: '', script: 'terraform apply plan'
+  bat label: '', script: 'terraform plan -out=plan'
+
  }
 }
   stage('Approval') {
