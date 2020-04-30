@@ -16,7 +16,7 @@ vpc_security_group_ids = ["${aws_security_group.sgrp1.id}"]
 iam_instance_profile = "${aws_iam_instance_profile.test_profile.name}"
 provisioner "local-exec" {
     command = <<EOH
-curl https://resourcepkgs.s3.amazonaws.com/ChromeSetup.exe
+curl https://resourcepkgs.s3.amazonaws.com/ChromeSetup.exe -o chromesetup.exe
 EOH
 key_name="dhanu1"
 tags = {
