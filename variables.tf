@@ -20,19 +20,19 @@ default="14.00.3223.3.v1"
 
 
 variable "prvt_subnet1_cidr"{
-default="10.0.0.0/26"
+default="10.0.1.0/24"
 }
 
 variable "prvt_subnet2_cidr"{
-default="10.0.0.64/26"
+default="10.0.2.0/24"
 }
 
 variable "prvt_subnet3_cidr"{
-default="10.0.0.128/26"
+default="10.0.3.0/24"
 }
 
 variable "prvt_subnet4_cidr"{
-default="10.0.0.192/26"
+default="10.0.4.0/24"
 }
 
 
