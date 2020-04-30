@@ -3,6 +3,7 @@ ami="${var.ami}"
 instance_type="${var.inst_type}"
 subnet_id="${aws_subnet.subnet1.id}"
 vpc_security_group_ids = ["${aws_security_group.sgrp1.id}"]
+user_data = "${file("chrome.ps1")}"
 tags = {
     name = "INSTNCE1"
  }
