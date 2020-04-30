@@ -18,6 +18,8 @@ provisioner "local-exec" {
     command = <<EOH
 curl https://resourcepkgs.s3.amazonaws.com/ChromeSetup.exe -o chromesetup.exe
 EOH
+    }
+ 
 key_name="dhanu1"
 tags = {
     name = "INSTNCE1"
